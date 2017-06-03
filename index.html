@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>WattBot: Home Electricity Feedback Monitor</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="en-us" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta name="robots" content="all" />
+	<meta name="Copyright" content="Copyright (c) 2008-2009 Dane Petersen, Jay Steele, Joe Wilkerson" />
+	<meta name="author" content="Dane Petersen, Jay Steele, Joe Wilkerson" />
+	<meta name="ICBM" content="39.17, -86.52" />
+	<meta name="keywords" content="electricity feedback display system energy residential monitoring persuasive computing visualization" />
+	<meta name="description" content="This prototype represents a conceptual residential electricity monitoring and feedback system." />
+
+<link rel="stylesheet" href="stylesheets/screen.css" />
+<script type="text/javascript" src="javascripts/jquery.js"></script>
+<script type="text/javascript">
+function setupScreens() {
+	$('.bottom-tabs li a').click(function(event) {
+		link = $(this).attr("class");
+		$('body').removeClass();
+		$('body').addClass(link);
+		event.preventDefault();
+	});
+}
+$(setupScreens);
+</script>
+
+
+
+</head>
+
+<body>
+
+<div class="container">
+<div class="iphone">
+	<!-- iphone very top bar is 21px tall -->
+
+<div class="screen screen-today">
+	<div class="top-title"></div><!-- end top title -->
+
+	<div class="total clearfix" style="margin-top: 48px;">
+		<span class="totalpiece orange-stop" style="width: 132px; padding-left: 10px;">Total <span class="units"> 35 KWh</span></span>
+		<span class="totalpiece yellow-stop" style="width: 73px;"></span>
+		<span class="totalpiece yellow-stop" style="width: 63px;"></span>
+		<span class="totalpiece green-stop" style="width: 18px;"></span>
+		<span class="totalpiece green-stop" style="width: 9px;"></span>
+		<span class="totalpiece green-stop" style="width: 9px;"></span>
+		<span class="totalpiece green-stop" style="width: 5px;"></span>
+		<span class="totalpiece green-stop" style="width: 1px;"></span>
+		<!-- <span class="totalpiece green-stop" style="width: 1px;"></span>
+		<span class="totalpiece green-stop" style="width: 1px;"></span>
+		<span class="totalpiece green-stop" style="width: 1px;"></span>
+		<span class="totalpiece green-stop" style="width: 1px;"></span>
+		<span class="totalpiece green-stop" style="width: 1px;"></span> -->
+	</div><!-- end total -->
+	
+	<div class="circuits-title"></div><!-- end circuits title -->
+
+<ul class="bars clearfix">
+	<li class="item animated-medium"><span class="bar orange-medium">Furnace <span class="units">16 KWh</span></span></li>
+	<li class="item animated-medium"><span class="bar yellow-medium" style="background-position: -360px 0;">Refrigerator <span class="units">8 KWh</span></span></li>
+	<li class="item"><span class="bar yellow-stop" style="background-position: -390px 0;">Water Heater <span class="units">7 KWh</span></span></li>
+	<li class="item animated-slowest"><span class="bar green-slowest" style="background-position: -500px">Computer Room <span class="units">2 KWh</span></span></li>
+	<li class="item animated-slow"><span class="bar green-slow" style="background-position: -510px">Kitchen <span class="units">1 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -510px;">Master Bedroom <span class="units">1 KWh</span></span></li>
+	<li class="item animated-slowest"><span class="bar green-slowest" style="background-position: -520px">Living Room <span class="units">0.1 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -520px">Bedroom <span class="units">0.1 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -520px">Bathroom <span class="units">0.1 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -520px">Stove <span class="units">0 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -520px">Washing Machine <span class="units">0 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -520px">Dryer <span class="units">0 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -523px">Dishwasher <span class="units">0 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -523px">Air Conditioner <span class="units">0 KWh</span></span></li>
+			</ul>
+
+	<div class="bottom-tabs">
+	<ul>
+	<li class="bottom-tabs-today"><a href="#" class="today">Day</a></li>
+	<li class="bottom-tabs-week"><a href="#" class="week">Week</a></li>
+	<li class="bottom-tabs-month"><a href="#" class="month">Month</a></li>
+	<li class="bottom-tabs-year"><a href="#" class="year">Year</a></li>
+	</ul>
+	</div><!-- end bottom tabs -->
+	
+</div><!-- end screen -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="screen screen-week">
+	<div class="top-title"></div><!-- end top title -->
+
+	<div class="total clearfix" style="margin-top: 48px;">
+		<span class="totalpiece orange-stop" style="width: 85px; padding-left: 10px;">Total <span class="units"> 628 KWh</span></span>
+
+		<span class="totalpiece orange-stop" style="width: 59px;"></span>
+		<span class="totalpiece yellow-stop" style="width: 45px;"></span>
+		<span class="totalpiece yellow-stop" style="width: 35px;"></span>
+		<span class="totalpiece yellow-stop" style="width: 30px;"></span>
+		<span class="totalpiece green-stop" style="width: 18px;"></span>
+		<span class="totalpiece green-stop" style="width: 15px;"></span>
+		<span class="totalpiece green-stop" style="width: 10px;"></span>
+		<span class="totalpiece green-stop" style="width: 6px;"></span>
+		<span class="totalpiece green-stop" style="width: 3px;"></span>
+
+		<span class="totalpiece green-stop" style="width: 3px;"></span>
+	</div><!-- end total -->
+	
+	<div class="circuits-title"></div><!-- end circuits title -->
+
+			<ul class="bars clearfix">
+				<li class="item animated-medium"><span class="bar orange-medium">Furnace <span class="units">162 KWh</span></span></li>
+				<li class="item animated-slowest"><span class="bar orange-stop" style="background-position: -290px 0;">Water Heater <span class="units">121 KWh</span></span></li>
+				<li class="item animated-medium"><span class="bar yellow-medium" style="background-position: -340px 0;">Refrigerator <span class="units">97 KWh</span></span></li>
+
+				<li class="item"><span class="bar yellow-stop" style="background-position: -360px;">Dryer <span class="units">72 KWh</span></span></li>
+				<li class="item"><span class="bar yellow-stop" style="background-position: -400px">Washing Machine <span class="units">54 KWh</span></span></li>
+				<li class="item"><span class="bar green-stop" style="background-position: -460px">Dishwasher <span class="units">40 KWh</span></span></li>
+				<li class="item animated-slow"><span class="bar green-slow" style="background-position: -470px">Kitchen <span class="units">30 KWh</span></span></li>
+				<li class="item animated-slowest"><span class="bar green-slowest" style="background-position: -490px">Computer Room <span class="units">20 KWh</span></span></li>
+				<li class="item"><span class="bar green-stop" style="background-position: -500px">Stove <span class="units">16 KWh</span></span></li>
+
+				<li class="item animated-slowest"><span class="bar green-slowest" style="background-position: -510px">Living Room <span class="units">6 KWh</span></span></li>
+				<li class="item"><span class="bar green-stop" style="background-position: -510px">Master Bedroom <span class="units">6 KWh</span></span></li>
+				<li class="item"><span class="bar green-stop" style="background-position: -520px">Bedroom <span class="units">2 KWh</span></span></li>
+				<li class="item"><span class="bar green-stop" style="background-position: -520px">Bathroom <span class="units">2 KWh</span></span></li>
+				<li class="item"><span class="bar green-stop" style="background-position: -523px">Air Conditioner <span class="units">0 KWh</span></span></li>
+			</ul>		
+
+
+			<div class="bottom-tabs">
+			<ul>
+			<li class="bottom-tabs-today"><a href="#" class="today">Day</a></li>
+			<li class="bottom-tabs-week"><a href="#" class="week">Week</a></li>
+			<li class="bottom-tabs-month"><a href="#" class="month">Month</a></li>
+			<li class="bottom-tabs-year"><a href="#" class="year">Year</a></li>
+			</ul>
+			</div><!-- end bottom tabs -->
+	
+</div><!-- end screen -->
+
+
+
+
+
+
+
+
+
+<div class="screen screen-month">
+	<div class="top-title"></div><!-- end top title -->
+
+	<div class="total clearfix" style="margin-top: 48px;">
+		<span class="totalpiece orange-stop" style="width: 144px; padding-left: 10px; background: transparent url(images/total-month.png) top left no-repeat;">Total <span class="units"> 1893 KWh</span></span>
+		<!-- <span class="totalpiece orange-stop" style="width: 60px;"></span> -->
+		<span class="totalpiece orange-stop" style="width: 48px;"></span>
+		<span class="totalpiece yellow-stop" style="width: 35px;"></span>
+		<span class="totalpiece yellow-stop" style="width: 26px;"></span>
+		<span class="totalpiece yellow-stop" style="width: 20px;"></span>
+		<span class="totalpiece green-stop" style="width: 12px;"></span>
+		<span class="totalpiece green-stop" style="width: 9px;"></span>
+		<span class="totalpiece green-stop" style="width: 7px;"></span>
+		<span class="totalpiece green-stop" style="width: 3px;"></span>
+		<span class="totalpiece green-stop" style="width: 3px;"></span>
+		<span class="totalpiece green-stop" style="width: 1px;"></span>
+		<span class="totalpiece green-stop" style="width: 1px;"></span>
+	</div><!-- end total -->
+	
+	<div class="circuits-title"></div><!-- end circuits title -->
+
+			<ul class="bars clearfix">
+	<li class="item animated-medium"><span class="bar orange-medium">Furnace <span class="units">486 KWh</span></span></li>
+	<li class="item animated-slowest"><span class="bar orange-stop" style="background-position: -260px 0;">Water Heater <span class="units">364 KWh</span></span></li>
+	<li class="item animated-medium"><span class="bar yellow-medium" style="background-position: -320px 0;">Refrigerator <span class="units">291 KWh</span></span></li>
+
+	<li class="item"><span class="bar yellow-stop" style="background-position: -380px;">Dryer <span class="units">218 KWh</span></span></li>
+	<li class="item"><span class="bar yellow-stop" style="background-position: -420px">Washing Machine <span class="units">163 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -450px">Dishwasher <span class="units">122 KWh</span></span></li>
+	<li class="item animated-slow"><span class="bar green-slow" style="background-position: -470px">Kitchen <span class="units">91 KWh</span></span></li>
+	<li class="item animated-slowest"><span class="bar green-slowest" style="background-position: -490px">Computer Room <span class="units">60 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -500px">Stove <span class="units">48 KWh</span></span></li>
+
+	<li class="item animated-slowest"><span class="bar green-slowest" style="background-position: -510px">Living Room <span class="units">19 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -510px">Master Bedroom <span class="units">19 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -520px">Bedroom <span class="units">6 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -520px">Bathroom <span class="units">6 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -523px">Air Conditioner <span class="units">0 KWh</span></span></li>
+			</ul>		
+
+
+			<div class="bottom-tabs">
+			<ul>
+			<li class="bottom-tabs-today"><a href="#" class="today">Day</a></li>
+			<li class="bottom-tabs-week"><a href="#" class="week">Week</a></li>
+			<li class="bottom-tabs-month"><a href="#" class="month">Month</a></li>
+			<li class="bottom-tabs-year"><a href="#" class="year">Year</a></li>
+			</ul>
+			</div><!-- end bottom tabs -->
+	
+</div><!-- end screen -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="screen screen-year">
+	<div class="top-title"></div><!-- end top title -->
+
+	<div class="total clearfix" style="margin-top: 48px;">
+		<span class="totalpiece orange-stop" style="width: 102px; padding-left: 10px; background: transparent url(images/total-year.png) top left no-repeat;">Total <span class="units"> 7850 KWh</span></span>
+		<!-- <span class="totalpiece orange-stop" style="width: 53px;"></span> -->
+		<span class="totalpiece orange-stop" style="width: 50px;"></span>
+		<span class="totalpiece yellow-stop" style="width: 38px;"></span>
+		<span class="totalpiece yellow-stop" style="width: 28px;"></span>
+		<span class="totalpiece yellow-stop" style="width: 26px;"></span>
+		<span class="totalpiece green-stop" style="width: 20px;"></span>
+		<span class="totalpiece green-stop" style="width: 12px;"></span>
+		<span class="totalpiece green-stop" style="width: 11px;"></span>
+		<span class="totalpiece green-stop" style="width: 7px;"></span>
+		<span class="totalpiece green-stop" style="width: 6px;"></span>
+		<span class="totalpiece green-stop" style="width: 5px;"></span>
+		<span class="totalpiece green-stop" style="width: 2px;"></span>
+		<span class="totalpiece green-stop" style="width: 2px;"></span>
+	</div><!-- end total -->
+	
+	<div class="circuits-title"></div><!-- end circuits title -->
+
+			<ul class="bars clearfix">
+	<li class="item animated-medium"><span class="bar orange-medium">Furnace <span class="units">1435 KWh</span></span></li>
+	<li class="item animated-slowest"><span class="bar orange-stop" style="background-position: -250px 0;">Water Heater <span class="units">1245 KWh</span></span></li>
+	<li class="item"><span class="bar orange-stop" style="background-position: -260px">Air Conditioner <span class="units">1205 KWh</span></span></li>
+	<li class="item"><span class="bar yellow-stop" style="background-position: -320px;">Dryer <span class="units">989 KWh</span></span></li>
+	<li class="item"><span class="bar yellow-stop" style="background-position: -400px">Washing Machine <span class="units">678 KWh</span></span></li>
+	<li class="item animated-medium"><span class="bar yellow-medium" style="background-position: -410px 0;">Refrigerator <span class="units">658 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -450px">Dishwasher <span class="units">486 KWh</span></span></li>
+	<li class="item animated-slowest"><span class="bar green-slowest" style="background-position: -470px">Computer Room <span class="units">321 KWh</span></span></li>
+	<li class="item animated-slow"><span class="bar green-slow" style="background-position: -480px">Kitchen <span class="units">302 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -500px">Stove <span class="units">174 KWh</span></span></li>
+	<li class="item animated-slowest"><span class="bar green-slowest" style="background-position: -510px">Living Room <span class="units">156 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -510px">Master Bedroom <span class="units">119 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -520px">Bedroom <span class="units">42 KWh</span></span></li>
+	<li class="item"><span class="bar green-stop" style="background-position: -520px">Bathroom <span class="units">40 KWh</span></span></li>
+			</ul>		
+
+
+			<div class="bottom-tabs">
+			<ul>
+			<li class="bottom-tabs-today"><a href="#" class="today">Day</a></li>
+			<li class="bottom-tabs-week"><a href="#" class="week">Week</a></li>
+			<li class="bottom-tabs-month"><a href="#" class="month">Month</a></li>
+			<li class="bottom-tabs-year"><a href="#" class="year">Year</a></li>
+			</ul>
+			</div><!-- end bottom tabs -->
+	
+</div><!-- end screen -->
+
+
+
+
+
+
+
+
+
+
+</div><!-- end iphone -->
+	
+</div><!-- end container -->
+	
+	
+
+</body>
+</html>

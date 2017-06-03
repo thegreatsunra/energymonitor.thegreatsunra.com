@@ -1,0 +1,214 @@
+/* -------------------------------------------
+Styles for WattBot Home Electricity Usage Monitor Prototype
+Copyright (c) 2008-2009 Dane Petersen, Jay Steele, Joe Wilkerson
+Presented at CHI 2009. Boston, MA. April 2009.
+http://doi.acm.org/10.1145/1520340.1520413
+------------------------------------------- */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+body {line-height:1.5;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+
+a:focus {
+	outline: none;
+	text-decoration: none;
+	-moz-outline-style: none;
+}
+
+body {
+	font-size: 14px;
+	font-family: helvetica, arial, sans-serif;
+	color: #eee;
+	background-color: #000;
+	text-shadow: #666 0px 1px 2px;
+}
+
+.container {
+	width: 389px;
+	height: 719px;
+	margin: 20px auto 0 auto;
+	position: relative;
+}
+
+li {
+	list-style: none;
+	display: block;
+	width: 320px;
+}
+
+li.animated-fast {
+	background: transparent url(../images/grey-fast.gif) no-repeat;
+}
+
+li.animated-medium {
+	background: transparent url(../images/grey-medium.gif) no-repeat;
+}
+
+li.animated-slow {
+	background: transparent url(../images/grey-slow.gif) no-repeat;
+}
+
+li.animated-slowest {
+	background: transparent url(../images/grey-slowest.gif) no-repeat;
+}
+
+.bar {
+	background: transparent url(../images/none.gif) 0 0 no-repeat;
+	padding: 6px 0 4px 10px;
+	display: block;
+	width: 310px; /* match with padding */
+}
+
+span.units {
+	font-size: 10px;
+}
+
+span.totalpiece {
+	height: 30px;
+	padding-top: 10px;
+	float: left;
+	display: block;
+}
+
+.orange-stop {background-image: url(../images/orange-stop.gif);}
+.yellow-stop {background-image: url(../images/yellow-stop.gif);}
+.green-stop {background-image: url(../images/green-stop.gif);}
+
+.orange-slowest {background-image: url(../images/orange-slowest.gif);}
+.yellow-slowest {background-image: url(../images/yellow-slowest.gif);}
+.green-slowest {background-image: url(../images/green-slowest.gif);}
+
+.orange-slow {background-image: url(../images/orange-slow.gif);}
+.yellow-slow {background-image: url(../images/yellow-slow.gif);}
+.green-slow {background-image: url(../images/green-slow.gif);}
+
+.orange-medium {background-image: url(../images/orange-medium.gif);}
+.yellow-medium {background-image: url(../images/yellow-medium.gif);}
+.green-medium {background-image: url(../images/green-medium.gif);}
+
+.orange-fast {background-image: url(../images/orange-fast.gif);}
+.yellow-fast {background-image: url(../images/yellow-fast.gif);}
+.green-fast {background-image: url(../images/green-fast.gif);}
+
+.top-title {
+	width: 320px;
+	height: 48px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+body .top-title, body.today .top-title  {
+	background: transparent url(../images/top-title-today.png) 0 0 no-repeat;
+}
+
+body.week .top-title  {
+	background: transparent url(../images/top-title-week.png) 0 0 no-repeat;
+}
+
+body.month .top-title  {
+	background: transparent url(../images/top-title-month.png) 0 0 no-repeat;
+}
+
+body.year .top-title {
+	background: transparent url(../images/top-title-year.png) 0 0 no-repeat;
+}
+
+.bottom-tabs {
+	 width: 320px;
+	height: 49px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.bottom-tabs, body.today .bottom-tabs {
+	background: transparent url(../images/bottom-tabs-today.png) 0 0 no-repeat;
+}
+
+body.week .bottom-tabs {
+	background: transparent url(../images/bottom-tabs-week.png) 0 0 no-repeat;
+}
+
+body.month .bottom-tabs {
+	background: transparent url(../images/bottom-tabs-month.png) 0 0 no-repeat;
+}
+
+body.year .bottom-tabs {
+	background: transparent url(../images/bottom-tabs-year.png) 0 0 no-repeat;
+}
+
+.bottom-tabs ul li {
+	display: inline;
+	list-style: none;
+}
+
+.bottom-tabs a {
+	display: block;
+	float: left;
+	height: 47px;
+	width: 78px;
+	margin-right: 2px;
+	text-decoration: none;
+	color: #fff;
+	text-indent: -5000px;
+}
+
+.screen {
+	position: absolute;
+	top: 141px;
+	left: 36px;
+	background-color: #3f3f3f;
+	height: 459px;
+	width: 320px;
+	overflow: hidden;
+}
+
+.iphone {
+	background: transparent url(../images/wattbot-bg.png) no-repeat;
+	width: 389px;
+	height: 719px;
+	position: relative;
+}
+
+.circuits-title {
+	background: transparent url(../images/circuits-title.png) 0 0 no-repeat;
+	width: 320px;
+	height: 27px;
+}
+
+.screen-month,
+.screen-week,
+.screen-year,
+body.today .screen-week,
+body.today .screen-month,
+body.today .screen-year,
+body.week .screen-today,
+body.week .screen-month,
+body.week .screen-year,
+body.month .screen-today,
+body.month .screen-week,
+body.month .screen-year,
+body.year .screen-today,
+body.year .screen-week,
+body.year .screen-month {
+	display: none;
+}
+
+.screen-today,
+body.today .screen-today,
+body.week .screen-week,
+body.month .screen-month,
+body.year .screen-year {
+	display: block;
+}
+
+.clearfix:after, .container:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix, .container {display:inline-block;}
+* html .clearfix, * html .container {height:1%;}
+.clearfix, .container {display:block;}
